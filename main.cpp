@@ -1,5 +1,6 @@
-#include <stdioh>
 #include <iostream>
+#include "user/user.h"
+#include "admin/admin.h"
 
 using std::cout;
 using std::cin;
@@ -11,18 +12,18 @@ int main() {
     int role;
     do {
         cout << "\n=== Bank system ===\n";
-        cout << "1. Login as a user\n";
-        cout << "2. Login as administrator\n";
+        cout << "1. Log in as a user\n";
+        cout << "2. Log in as administrator\n";
         cout << "3. Exit\n";
         cout << "Choose a role: ";
         cin >> role;
 
         switch (role) {
             case 1:
-                //userInterface(manager);  // User
+                userInterface();  // User
                 break;
             case 2:
-                //adminInterface(manager);  // Admin
+                adminInterface(); // Admin
                 break;
             case 3:
                 cout << "Closing program." << endl;
